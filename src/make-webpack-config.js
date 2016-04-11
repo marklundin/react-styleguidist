@@ -106,16 +106,7 @@ module.exports = function(env) {
 			cache: false,
 			plugins: [
 				new webpack.optimize.OccurenceOrderPlugin(),
-				new webpack.optimize.DedupePlugin(),
-				new webpack.optimize.UglifyJsPlugin({
-					compress: {
-						warnings: false
-					},
-					output: {
-						comments: false
-					},
-					mangle: false
-				})
+				new webpack.optimize.DedupePlugin()
 			],
 			module: {
 				loaders: [
